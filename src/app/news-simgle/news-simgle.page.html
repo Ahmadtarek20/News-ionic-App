@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>news-simgle</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-back-button (click)="onBack()"></ion-back-button>
+
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-card>
+        <ion-img [src]='articles.urlToImage'></ion-img>
 
+        <ion-card-content>
+            <ion-card-title>{{articles.title}}</ion-card-title>
+            <p>{{articles.description}}</p>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
